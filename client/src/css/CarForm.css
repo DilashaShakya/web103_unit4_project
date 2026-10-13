@@ -1,0 +1,117 @@
+.car-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.car-preview {
+    width: 100%;
+    height: auto;
+    background: radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.12), transparent 70%);
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.preview-card {
+    position: sticky;
+    top: 20px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.price-row strong {
+    font-size: 1.8rem;
+}
+
+.error-message {
+    background: rgba(214, 40, 40, 0.15);
+    border: 1px solid #d62828;
+    color: #ffb4b4;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#root .form-actions button,
+#root .form-actions [role=button] {
+    margin: 0 10px 0 0;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+.feature legend {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 8px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#root .chip {
+    margin: 0;
+    padding: 8px 14px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: none;
+    font-weight: 400;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    position: relative;
+}
+
+#root .chip:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+#root .chip.selected {
+    background: var(--primary);
+    border-color: white;
+}
+
+.chip small {
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+.swatch {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-bottom: 4px;
+}
+
+@media (max-width: 800px) {
+    .car-form {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-card {
+        position: static;
+    }
+}
