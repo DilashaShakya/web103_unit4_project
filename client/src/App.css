@@ -10,3 +10,89 @@
     overflow-x: hidden;
     padding-bottom: 50px;
 }
+
+.page {
+    padding-top: 30px;
+}
+
+.page-title {
+    margin-bottom: 20px !important;
+}
+
+.price {
+    font-size: 1.3rem;
+    color: #ffd166;
+}
+
+/* list of cars */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#root .car-card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.car-card header,
+.details-card header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.car-card footer,
+.details-card footer {
+    flex-wrap: wrap;
+    margin-top: auto !important;
+}
+
+#root .car-card footer [role=button],
+#root .car-card footer button {
+    margin: 4px 8px 0 0;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+}
+
+.specs {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.specs li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 0;
+}
+
+.specs li span {
+    color: #aaa;
+}
+
+.details-card {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.empty-state {
+    text-align: center !important;
+}
+
+#root button.danger {
+    background: transparent;
+    border: 2px solid #d62828;
+    color: #ff8a8a;
+}
+
+#root button.danger:hover {
+    background: #d62828;
+    color: white;
+}
